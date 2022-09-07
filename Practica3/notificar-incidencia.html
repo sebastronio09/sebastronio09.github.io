@@ -11,33 +11,55 @@
     
 </body>
 
+<form action="">
 
-<fieldset>
-    <legend>Datos de la incidencia</legend>
-    Nombre <br>
-    <input name='nombre' type='text' tabindex='1'>
+    <fieldset>
+        <legend>Datos de la incidencia</legend>
+        Nombre <br>
+        <input name='nombre' type='text' tabindex='1' style="text-transform: uppercase">
+        
+        <br>
+        Datos de la incidencia <br>
+        <select name="select"  id="pepe" onchange="funcion2()">
+            <option value="value1" selected>Opcion 1</option>
+            <option value="value2" >Value 2</option>
+            <option value="value3">Value 3</option>
+        </select>
+        
+        <br>
+        Area de texto: 
+        <br>
+        <textarea name="descripcion" onkeyup="mifuncion()" id="algo" cols="30" rows="10">algo pepe ete sech</textarea>
+        
+    </fieldset>
+    
+    <fieldset>
+        <legend>Agrupacion de botones:</legend>
+        <input type="reset" value="Reset">
+        <input type="button" value="Enviar">
+        
+        
+    </fieldset>
+    
+</form>
 
-    <br>
-    Datos de la incidencia <br>
-    <select name="select">
-        <option value="value1" selected>Opcion 1</option>
-        <option value="value2" >Value 2</option>
-        <option value="value3">Value 3</option>
-    </select>
+<script>
+    function funcion2() {
+        var dropDown = document.getElementById("pepe");
 
-    <br>
-    Area de texto: 
-    <br>
-    <textarea name="descripcion" id="" cols="30" rows="10">algo pepe ete sech</textarea>
+        if(dropDown.selectedIndex == 1){
+            alert("No se puede seleccionar esa opcion");
+            dropDown.selectedIndex = 0;
+        }
+    }
+</script>
 
-</fieldset>
+<script>
+    function mifuncion() {
+        let text = document.getElementById("algo").value;
+        document.getElementById("algo").value = text.replace(" ", "@");
+        
+    }
+</script>
 
-<fieldset>
-    <legend>Agrupacion de botones:</legend>
-    <input type="button" value="Resetear">
-    <input type="button" value="Enviar">
-
-
-</fieldset>
-
-</html>
+    </html>
