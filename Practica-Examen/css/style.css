@@ -17,14 +17,25 @@ html {
 }
 
 #colorbeich{
-    background-color: beige;
+    background-color: beige !important;
 }
 
 
 
 .h1{
-
+    padding: 10pt;
     
+}
+
+#breaker{
+    height: 20px;
+    background-color: beige;
+
+}
+
+iframe{
+ 
+    background-color: beige;
 }
 
 i{
