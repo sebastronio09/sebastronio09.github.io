@@ -23,7 +23,7 @@ html {
 
 
 .h1{
-    padding: 10pt;
+    
     
 }
 
@@ -33,8 +33,12 @@ html {
 
 }
 
+body{
+    background-color: beige !important;
+}
+
+
 iframe{
- 
     background-color: beige;
 }
 
@@ -42,4 +46,19 @@ i{
     padding-right: 10px;
 
    color: rgb(225, 138, 16);
+}
+
+
+#reviews{
+
+    background-color: darkgray;
+    border-radius: 5px;
+    height: 30px;
+    width: 400px;
+}
+
+
+.container-sm {
+    width: 440px; /* Can be in percentage also. */
+    
 }
